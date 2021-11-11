@@ -1,0 +1,36 @@
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: black;
+    margin-top: 10px;
+    text-align: center;
+}
+.footer h3{
+    color: white;
+    margin: 30px;
+    font-family: 'Varela Round', sans-serif;    
+
+    
+}
+.footer p{
+    color: rgb(252, 245, 245);
+}
+.address{
+    color: rgb(252, 245, 245);
+}
+.copy-right{
+    text-align: center;
+    color: white;
+}
+.icon{
+    color: aqua;
+    margin-right: 7px;
+}
+    @media only screen and (max-width: 767px) {
+        .footer{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            background-color: black;
+            
+        }
+    }

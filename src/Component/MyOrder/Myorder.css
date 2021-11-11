@@ -1,0 +1,17 @@
+.info-card{
+    border: 1px solid rgb(133, 115, 115);
+    width: 350px; 
+    margin:10px;
+    padding: 20px;
+    height: 620px;
+}
+.Name-2 {
+    display: inline;
+}
+.delet-btn{
+    margin-left: 50px;
+    padding: 0px;
+    margin-left: 100px;
+    margin-top: 5px;
+    background-color: yellow;
+}

@@ -1,0 +1,66 @@
+.details-service{
+    display: flex;
+    margin-top: 40px;
+    padding-left: 40px;
+}
+.details-service form{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 150px;
+}
+ .input{
+    margin-bottom: 10px;
+    color: black;
+    border:none ;
+    background-color:#ddd9d9;
+    height: 50px;
+    border-radius: 20px;
+    width: 500px;
+    text-align: center;
+}
+.form-title{
+    padding-left: 120px;
+    padding-bottom: 50px;
+    color:rgb(36, 22, 238);
+    font-family: 'Roboto', sans-serif;
+    
+
+}
+.input-detile{
+    visibility: hidden;
+    }
+.input-btn{
+    width: 500px;
+    background-color: rgb(255, 201, 180);
+    border: none;
+    height: 40px;
+    border-radius: 20px;
+}
+/* .card-bod{
+    margin-left: 60px; */
+
+:-ms-input-placeholder {  
+    text-align: center; 
+ }
+
+ @media (max-width: 767.98px) {
+     .details-service{
+         display: flex;
+         flex-direction:column;
+         padding-left: 1px;
+     }
+     .details-service form{
+         width: 40%;
+         margin-left: 40px;
+     }
+     .input{
+         width: 300px;
+     }
+     .input-btn{
+         width: 300px;
+     }
+     .form-title{
+         padding-left: 30px;
+     }
+ }

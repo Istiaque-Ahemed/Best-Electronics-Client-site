@@ -1,0 +1,36 @@
+.navbar {
+   color:black;
+   text-decoration: none;
+   font-family: 'Varela Round', sans-serif;
+   padding: 8px;
+}
+.navbar:hover{
+  color:#00BCD8;
+
+}
+.navbar-login{
+  text-decoration: none;
+  background-color: aqua;
+  padding: 10px;
+}
+.Nav-link{
+  text-decoration: none;
+  color: black;
+  padding-top: 8px;
+}
+.Nav-text{
+  text-decoration: none;
+  background-color: turquoise;
+  padding: 10px 15px;
+  border-radius: 7px;
+}
+.Nav-area{
+  padding-right: 20px;
+}
+.button-1{
+ border: none;
+ background-color: turquoise;
+  padding: 8px 8px;
+  border-radius: 7px;
+  padding-bottom: 6px;
+}
