@@ -26,18 +26,23 @@ const Header = () => {
 
                         <Nav className="pe-5 Nav-area">
                             <NavLink className="pe-4 Nav-link" to="/home">Home</NavLink>
-                            <NavLink className="pe-4 Nav-link" to="/services">Services</NavLink>
+                            <NavLink className="pe-4 Nav-link" to="/products">Products</NavLink>
                             <NavLink className="pe-4 Nav-link" to="/contact">Contact Us</NavLink>
                             {user.email ? (
                                 <NavDropdown title="Dashboard" id="basic-nav-dropdown">
                                     <NavDropdown.Item as={Link} to="/myorder">
-                                        My Booking
+                                        My Order
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item as={Link} to="/manageorders">
-                                        Manage All Booking
+                                    <NavDropdown.Item as={Link} to="/pay">
+                                        Pay
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item as={Link} to="/addservice">
-                                        Add New Package
+                                    <NavDropdown.Item as={Link} to="/review">
+                                        Review
+                                    </NavDropdown.Item>
+                                    <NavDropdown.Item>
+                                        <button onClick={logout} className="btn btn-primary">
+                                            Logout
+                                        </button>
                                     </NavDropdown.Item>
                                 </NavDropdown>
                             ) : (

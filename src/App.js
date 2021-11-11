@@ -11,6 +11,7 @@ import Registar from './Component/Register/Registar';
 import ProductDetail from './Component/ProductDetail/ProductDetail';
 import Login from './Component/Login/Login'
 import Order from './Component/Order/Order';
+import Pay from './Component/Pay/Pay';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
           <Switch>
+
             <Route exact path="/">
               <Headar></Headar>
               <Banner></Banner>
@@ -38,8 +40,13 @@ function App() {
               <Footer></Footer>
             </Route>
             <Route path="/products">
+              <Headar></Headar>
               <Products></Products>
               <Footer></Footer>
+            </Route>
+            <Route path="/pay">
+              <Headar></Headar>
+              <Pay></Pay>
             </Route>
             <PrivateRoute path="/product/:productId">
               < Headar></Headar>
