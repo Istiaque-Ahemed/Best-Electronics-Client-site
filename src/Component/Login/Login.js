@@ -1,46 +1,76 @@
+import { Button, Spinner, Alert } from "react-bootstrap";
 import React from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
-import useAuth from '../../hooks/useAuth';
+import { Col, Container, FloatingLabel, Row, Form } from 'react-bootstrap';
+import { useState } from "react";
+import { NavLink, useLocation, useHistory } from "react-router-dom";
 import './Login.css'
-
+import useAuth from "../../hooks/useAuth";
 
 const Login = () => {
-    const { signInUsinGoogle } = useAuth();
-    const location = useLocation()
-    const history = useHistory()
-    const redirect_uri = location.state?.from || '/home'
+    const { user, loginUser, signInUsinGoogle, isLoading, error } = useAuth();
+    const [loginData, setLoginData] = useState({})
+    const location = useLocation();
+    const history = useHistory();
 
+    const handleOnChange = e => {
+        const field = e.target.name;
+        const value = e.target.value;
+        const newLoginData = { ...loginData };
+        newLoginData[field] = value;
+        setLoginData(newLoginData)
+    }
+    const handleLoginSubmit = e => {
+        loginUser(loginData.email, loginData.password, location, history)
+        e.preventDefault()
+    }
 
-
-
-    const handleGoogleLogin = () => {
-        signInUsinGoogle()
-            // .then(result => {
-
-            //     setUser(result.user)
-            // })
-            // .catch(error => {
-            //     setError(error.message)
-            // })
-            .then(result => {
-                history.push(redirect_uri)
-            })
-
+    const handleGoogleSignIn = () => {
+        signInUsinGoogle(location, history)
     }
     return (
-        < >
-            <div className="login-area">
-                <h2 className="login-title">Please Login</h2>
-                <input className="input-login" placeholder="Email" type="text" />
-                <br />
-                <input className="input-login2" placeholder="********" type="password" name="" id="" />
-                <br />
-                <input className="input-submit" type="submit" value="Login" />
-                <br />
-                <button className="google-signin" onClick={handleGoogleLogin}>Google Sign In</button> <br />
-            </div>
-            {/* <Link to="/register">New User?</Link> */}
-        </>
+        <Container>
+            <Row>
+                <Col sm={12} md={6}>
+                    <h3 className="text-center Login-title">Login</h3>
+                    <form onSubmit={handleLoginSubmit}>
+
+
+                        <>
+                            <div className="login-area">
+                                <FloatingLabel
+                                    controlId="floatingInput"
+                                    label="Email address"
+                                    className="mb-3"
+                                >
+                                    <Form.Control name="email" onChange={handleOnChange} style={{ width: '75%' }} type="email" placeholder="name@example.com" />
+                                </FloatingLabel>
+                                <FloatingLabel controlId="floatingPassword" label="Password">
+                                    <Form.Control name="password" onChange={handleOnChange} style={{ width: '75%' }} type="password" placeholder="Password" />
+                                </FloatingLabel>
+
+                                <Button className="login-btn" type="submit" variant="danger">Login</Button><br />
+                                <NavLink
+
+                                    to="/register">
+                                    <Button style={{ textDecoration: 'none' }} variant="link">New user?Please Register</Button>
+                                </NavLink>
+                                {isLoading && <Spinner className="text-center" animation="grow" variant="danger" />
+                                }
+                                {user?.email && <Alert> Login Successful</Alert>}
+                                {error && <Alert variant="denger">{error}</Alert>}
+                                {user?.email && <span></span>}
+                            </div>
+                        </>
+                    </form>
+                    <Button onClick={handleGoogleSignIn} variant="success">Google Sign In</Button>
+
+                </Col>
+                <Col sm={12} md={6}>
+                    <img style={{ width: '110%' }} src={'https://i.ibb.co/Xjv8jmY/Mobile-login-bro.png'} alt="" />
+
+                </Col>
+            </Row>
+        </Container>
     );
 };
 

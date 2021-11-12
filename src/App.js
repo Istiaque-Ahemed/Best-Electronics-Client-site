@@ -12,6 +12,7 @@ import ProductDetail from './Component/ProductDetail/ProductDetail';
 import Login from './Component/Login/Login'
 import Order from './Component/Order/Order';
 import Pay from './Component/Pay/Pay';
+import ShowAllProduct from './Component/ShowAllProduct/ShowAllProduct';
 
 function App() {
   return (
@@ -24,14 +25,12 @@ function App() {
               <Headar></Headar>
               <Banner></Banner>
               <Products></Products>
-              <Registar></Registar>
               <Footer></Footer>
             </Route>
             <Route exact path="/home">
               <Headar></Headar>
               <Banner></Banner>
               <Products></Products>
-              <Registar></Registar>
               <Footer></Footer>
             </Route>
             <Route path="/myorder">
@@ -52,7 +51,14 @@ function App() {
               < Headar></Headar>
               <ProductDetail></ProductDetail>
             </PrivateRoute>
+            <Route path="/show">
+              <ShowAllProduct></ShowAllProduct>
+            </Route>
+            <Route path="/register">
+              <Registar></Registar>
+            </Route>
             <Route path="/login">
+              < Headar></Headar>
               <Login></Login>
               <Footer></Footer>
             </Route>

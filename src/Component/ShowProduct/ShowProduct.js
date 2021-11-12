@@ -1,9 +1,8 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import './Product.css'
 
-const Product = ({ product }) => {
+const ShowProduct = ({ product }) => {
     const { _id, name, description, img, price } = product;
     const url = `/product/${_id}`;
     return (
@@ -13,13 +12,11 @@ const Product = ({ product }) => {
                     <Card.Img variant="top" src={img} />
                 </div>
                 <Card.Body>
-                    <h3 className="text-center text-danger">Price:{price}</h3>
-
                     <h3>{name}</h3>
                     <Card.Text>
                         {description}
                     </Card.Text>
-
+                    <h3 className="text-center text-danger">Price:{price}</h3>
                 </Card.Body>
 
                 <br />
@@ -35,4 +32,4 @@ const Product = ({ product }) => {
     );
 };
 
-export default Product;
+export default ShowProduct;

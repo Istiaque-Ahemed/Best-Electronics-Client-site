@@ -1,5 +1,5 @@
 
-import { Button } from 'bootstrap';
+import { Button } from 'react-bootstrap';
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -46,7 +46,7 @@ const MyOrder = ({ myorder }) => {
                     <span className="Name-2 fw-bold">Address: {Address}</span><br />
                     <span className="Name fw-bold">Email: {email}</span><br />
                     <span className="Name-4 fw-bold">Phone: {phone}</span><br />
-                    <button onClick={() => handleDelete(_id)} className="delet-btn">deled</button>
+                    <Button className="Delete" onClick={() => handleDelete(_id)} > Delete</Button>
                 </div>
 
             </div>

@@ -5,7 +5,7 @@
    padding: 8px;
 }
 .navbar:hover{
-  color:#00BCD8;
+  color:#d87300;
 
 }
 .navbar-login{
@@ -20,17 +20,22 @@
 }
 .Nav-text{
   text-decoration: none;
-  background-color: turquoise;
+  background-color: rgb(221, 112, 23);
   padding: 10px 15px;
   border-radius: 7px;
+  color: white;
 }
 .Nav-area{
   padding-right: 20px;
 }
 .button-1{
  border: none;
- background-color: turquoise;
+ background-color: rgb(224, 128, 64);
   padding: 8px 8px;
   border-radius: 7px;
   padding-bottom: 6px;
+}
+.logOut{
+  background-color: rgb(221, 112, 23);
+  color: white;
 }

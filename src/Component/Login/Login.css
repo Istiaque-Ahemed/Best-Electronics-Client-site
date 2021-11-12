@@ -1,58 +1,20 @@
 
+.Login-title{
+    margin-top: 150px;
+    margin-bottom: 30px;
+}
 .login-area{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin-left: 127px;
 
 }
-.login-title{
-    font-family: 'Roboto', sans-serif;
-    padding-top: 50px;
-
+.login-btn{
+    margin-top: 26px;
+    padding: 2px 137px;
 }
-.input-login{
-    border: none;
-    background-color: rgb(221, 221, 221);
-    height: 50px;
-    border-radius: 10px;
-    text-align: center;
-}
-.input-login2{
-    border: none;
-    background-color: rgb(221, 221, 221);
-    height: 50px;
-    border-radius: 10px;
-    text-align: center;
-}
-.input-submit{
-    border: none;
-    border-radius: 9px;
-    padding: 10px 20px;
-    background-color: sandybrown;
-}
-.google-signin{
-    border: none;
-    border-radius: 10px;
-    padding: 13px 22px;
-    background-color: seagreen;
-    color: white;
-
-}
-
 
 /* .input-submit */
 @media only screen and (max-width: 767px) {
 
-.input-login{
-    margin-bottom: 10px;
-}
-.input-login2{
-    margin-bottom: 10px;
-}
-.input-submit{
-    margin-bottom: 10px;
-}
     
 
 }

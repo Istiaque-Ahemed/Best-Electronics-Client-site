@@ -3,6 +3,10 @@ import './Headar.css';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { NavLink, Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUser } from '@fortawesome/free-solid-svg-icons'
+
+
 
 
 
@@ -27,7 +31,7 @@ const Header = () => {
                         <Nav className="pe-5 Nav-area">
                             <NavLink className="pe-4 Nav-link" to="/home">Home</NavLink>
                             <NavLink className="pe-4 Nav-link" to="/products">Products</NavLink>
-                            <NavLink className="pe-4 Nav-link" to="/contact">Contact Us</NavLink>
+                            <NavLink className="pe-4 Nav-link" to="/show">More Product</NavLink>
                             {user.email ? (
                                 <NavDropdown title="Dashboard" id="basic-nav-dropdown">
                                     <NavDropdown.Item as={Link} to="/myorder">
@@ -40,7 +44,7 @@ const Header = () => {
                                         Review
                                     </NavDropdown.Item>
                                     <NavDropdown.Item>
-                                        <button onClick={logout} className="btn btn-primary">
+                                        <button onClick={logout} className="btn logOut">
                                             Logout
                                         </button>
                                     </NavDropdown.Item>
@@ -49,7 +53,7 @@ const Header = () => {
                                 <NavLink to="/login" className="Nav-text">Login</NavLink>
                             )}
                             {user.email ? (
-                                <button onClick={logout} className="btn btn-primary">
+                                <button onClick={logout} className=" btn logOut">
                                     Logout
                                 </button>
                             ) : (
@@ -57,7 +61,7 @@ const Header = () => {
                             )}
                         </Nav>
                         <Navbar.Text>
-                            <span className="ps-3">{user.displayName} </span>
+                            <FontAwesomeIcon icon={faUser} />  <span className="ps-3">{user.displayName} </span>
                         </Navbar.Text>
 
 
