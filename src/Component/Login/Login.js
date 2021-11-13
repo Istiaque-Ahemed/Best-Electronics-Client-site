@@ -62,11 +62,11 @@ const Login = () => {
                             </div>
                         </>
                     </form>
-                    <Button onClick={handleGoogleSignIn} variant="success">Google Sign In</Button>
+                    <Button className="google-btn" onClick={handleGoogleSignIn} variant="success">Google Sign In</Button>
 
                 </Col>
                 <Col sm={12} md={6}>
-                    <img style={{ width: '110%' }} src={'https://i.ibb.co/Xjv8jmY/Mobile-login-bro.png'} alt="" />
+                    <img className="img" style={{ width: '90%' }} src={'https://i.ibb.co/Xjv8jmY/Mobile-login-bro.png'} alt="" />
 
                 </Col>
             </Row>

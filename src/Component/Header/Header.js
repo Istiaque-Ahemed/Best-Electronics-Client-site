@@ -5,6 +5,7 @@ import { NavLink, Link } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
+import { Box } from '@mui/material';
 
 
 
@@ -40,7 +41,7 @@ const Header = () => {
                                     <NavDropdown.Item as={Link} to="/pay">
                                         Pay
                                     </NavDropdown.Item>
-                                    <NavDropdown.Item as={Link} to="/review">
+                                    <NavDropdown.Item as={Link} to="/addreview">
                                         Review
                                     </NavDropdown.Item>
                                     <NavDropdown.Item>
@@ -53,9 +54,14 @@ const Header = () => {
                                 <NavLink to="/login" className="Nav-text">Login</NavLink>
                             )}
                             {user.email ? (
-                                <button onClick={logout} className=" btn logOut">
-                                    Logout
-                                </button>
+
+                                <Box>
+                                    <NavLink to="/dashboard" className="Nav-text me-2">Dashboard</NavLink>
+
+                                    <button onClick={logout} className=" btn logOut">
+                                        Logout
+                                    </button>
+                                </Box>
                             ) : (
                                 <span></span>
                             )}

@@ -13,6 +13,9 @@ import Login from './Component/Login/Login'
 import Order from './Component/Order/Order';
 import Pay from './Component/Pay/Pay';
 import ShowAllProduct from './Component/ShowAllProduct/ShowAllProduct';
+import AddReview from './Component/AddReview/AddReview';
+import ShowRview from './Component/ShowReview/ShowRview';
+import Dashboard from './Component/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -25,18 +28,28 @@ function App() {
               <Headar></Headar>
               <Banner></Banner>
               <Products></Products>
+              <ShowRview></ShowRview>
               <Footer></Footer>
             </Route>
             <Route exact path="/home">
               <Headar></Headar>
               <Banner></Banner>
               <Products></Products>
+              <ShowRview></ShowRview>
+              <Footer></Footer>
+            </Route>
+            <Route path="/addreview">
+              <Headar></Headar>
+              <AddReview></AddReview>
               <Footer></Footer>
             </Route>
             <Route path="/myorder">
               <Headar></Headar>
               <Order></Order>
               <Footer></Footer>
+            </Route>
+            <Route path="/showreview">
+              <ShowRview></ShowRview>
             </Route>
             <Route path="/products">
               <Headar></Headar>
@@ -51,11 +64,16 @@ function App() {
               < Headar></Headar>
               <ProductDetail></ProductDetail>
             </PrivateRoute>
+            <PrivateRoute path="/dashboard">
+              <Dashboard></Dashboard>
+            </PrivateRoute>
             <Route path="/show">
               <ShowAllProduct></ShowAllProduct>
             </Route>
             <Route path="/register">
+              < Headar></Headar>
               <Registar></Registar>
+              <Footer></Footer>
             </Route>
             <Route path="/login">
               < Headar></Headar>

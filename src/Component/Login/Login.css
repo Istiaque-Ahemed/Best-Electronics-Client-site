@@ -11,10 +11,27 @@
     margin-top: 26px;
     padding: 2px 137px;
 }
+.google-btn{
+    margin-left: 206px;
+}
 
 /* .input-submit */
 @media only screen and (max-width: 767px) {
 
+    .login-btn{
+        margin-top: 26px;
+        padding: 2px 76px;
+    }
+    .google-btn{
+        margin-left: 130px;
+    }
+    .login-area{
+        margin-left:80px;
+    
+    }
+    .img{
+        width:100px;
+    }
     
 
 }
