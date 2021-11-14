@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import './ShowProduct.css'
 
 const ShowProduct = ({ product }) => {
     const { _id, name, description, img, price } = product;

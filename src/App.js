@@ -16,6 +16,9 @@ import ShowAllProduct from './Component/ShowAllProduct/ShowAllProduct';
 import AddReview from './Component/AddReview/AddReview';
 import ShowRview from './Component/ShowReview/ShowRview';
 import Dashboard from './Component/Dashboard/Dashboard';
+import AddProduct from './Component/AddProduct/AddProduct';
+import ManageProduct from './Component/ManageProduct/ManageProduct';
+import NotFound from './Component/NotFound/NotFound';
 
 function App() {
   return (
@@ -68,19 +71,31 @@ function App() {
               <Dashboard></Dashboard>
             </PrivateRoute>
             <Route path="/show">
+              < Headar></Headar>
               <ShowAllProduct></ShowAllProduct>
+              <Footer></Footer>
             </Route>
             <Route path="/register">
               < Headar></Headar>
               <Registar></Registar>
               <Footer></Footer>
             </Route>
+            <Route path="/addproduct">
+              <AddProduct></AddProduct>
+            </Route>
             <Route path="/login">
               < Headar></Headar>
               <Login></Login>
               <Footer></Footer>
             </Route>
-
+            <Route path="/managesp">
+              <ManageProduct></ManageProduct>
+            </Route>
+            <Route exact path="*">
+              < Headar></Headar>
+              <NotFound></NotFound>
+              <Footer></Footer>
+            </Route>
           </Switch>
         </BrowserRouter>
       </AuthProvider>

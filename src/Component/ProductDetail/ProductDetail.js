@@ -27,7 +27,7 @@ const ProductDetail = () => {
             .post("http://localhost:5000/orders", data)
             .then((res) => {
                 if (res.data.insertedId) {
-                    alert("Package booked successfully");
+                    alert("Your buying successful");
                     reset();
                 }
 
@@ -56,7 +56,7 @@ const ProductDetail = () => {
             <div>
 
                 <h3 className="form-title">
-                    Please fill the form to book your package
+                    Please fill the form and buy your product
                 </h3>
 
                 <form onSubmit={handleSubmit(onSubmit)}>

@@ -16,7 +16,7 @@ const ShowAllProduct = () => {
     }, [])
     return (
         <>
-            <h2>All Products</h2>
+            <h2 className="text-center my-4">All Products</h2>
 
             <div className="all-product">
                 {

@@ -1,6 +1,6 @@
 import React from 'react';
 import './NotFound.css';
-import img from './404 Error Page not Found with people connecting a plug-amico.svg'
+import img from './404 Error Page not Found with people connecting a plug-bro.png'
 
 
 const NotFound = () => {

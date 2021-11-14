@@ -1,0 +1,13 @@
+
+.pay{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+@media (max-width: 767.98px){
+  .pay img{
+      width: 300px;
+  }
+}

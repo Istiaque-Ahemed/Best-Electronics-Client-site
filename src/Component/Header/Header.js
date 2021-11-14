@@ -1,7 +1,7 @@
 import React from 'react';
 import './Headar.css';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-import { NavLink, Link } from 'react-router-dom';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
@@ -34,26 +34,6 @@ const Header = () => {
                             <NavLink className="pe-4 Nav-link" to="/products">Products</NavLink>
                             <NavLink className="pe-4 Nav-link" to="/show">More Product</NavLink>
                             {user.email ? (
-                                <NavDropdown title="Dashboard" id="basic-nav-dropdown">
-                                    <NavDropdown.Item as={Link} to="/myorder">
-                                        My Order
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item as={Link} to="/pay">
-                                        Pay
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item as={Link} to="/addreview">
-                                        Review
-                                    </NavDropdown.Item>
-                                    <NavDropdown.Item>
-                                        <button onClick={logout} className="btn logOut">
-                                            Logout
-                                        </button>
-                                    </NavDropdown.Item>
-                                </NavDropdown>
-                            ) : (
-                                <NavLink to="/login" className="Nav-text">Login</NavLink>
-                            )}
-                            {user.email ? (
 
                                 <Box>
                                     <NavLink to="/dashboard" className="Nav-text me-2">Dashboard</NavLink>
@@ -63,7 +43,7 @@ const Header = () => {
                                     </button>
                                 </Box>
                             ) : (
-                                <span></span>
+                                <NavLink to="/login" className="Nav-text">Login</NavLink>
                             )}
                         </Nav>
                         <Navbar.Text>

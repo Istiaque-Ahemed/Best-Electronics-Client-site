@@ -28,7 +28,9 @@ const AddReview = () => {
 
                 <input className="name-fild" placeholder=" Your Occupation" {...register("occupation", { required: true, maxLength: 40 })} /> <br />
 
-                <textarea className="input-area" placeholder="Review" {...register("description")} /> <br />
+                <input className="input-area" placeholder="Review" {...register("description")} /> <br />
+
+                <input className="rating" type="number" placeholder="Rating"  {...register("rating")} /> <br />
 
                 <input className="submit-btn" type="submit" />
             </form>

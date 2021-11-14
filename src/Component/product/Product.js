@@ -7,7 +7,7 @@ const Product = ({ product }) => {
     const { _id, name, description, img, price } = product;
     const url = `/product/${_id}`;
     return (
-        <div className="card-bod col-lg-4 col-md-3 col-12">
+        <div className="card-body col-lg-4 col-md-3 col-12">
             <Card className="card shadow">
                 <div className="inner">
                     <Card.Img variant="top" src={img} />
