@@ -47,7 +47,7 @@ const Header = () => {
                             )}
                         </Nav>
                         <Navbar.Text>
-                            <FontAwesomeIcon icon={faUser} />  <span className="ps-3">{user.displayName} </span>
+                            {user.email && <FontAwesomeIcon icon={faUser} />} <span className="ps-3">{user.displayName} </span>
                         </Navbar.Text>
 
 

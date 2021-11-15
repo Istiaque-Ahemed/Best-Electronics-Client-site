@@ -1,0 +1,42 @@
+.Accordion-area{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-top: 50px;
+    font-family: 'Varela Round', sans-serif;    
+
+}
+.Accordion{
+    width: 400px;
+    background-color: aqua;
+    margin-left: 50px;
+}
+
+.acco-item{
+    border: none;
+    
+}
+.Accordion-area img{
+    padding-left: 40px;
+}
+
+@media only screen and (max-width: 767px) {
+    .Accordion{
+        width: 290px;
+    }
+    .Accordion-area{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        margin-top:20px
+           
+    
+    }
+    .Accordion-area img{
+        width: 300px;
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+    .para{
+        margin-left: 10px;
+        padding-right: 30px;
+    }
+}

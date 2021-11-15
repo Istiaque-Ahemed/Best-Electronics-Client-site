@@ -19,6 +19,7 @@ import Dashboard from './Component/Dashboard/Dashboard';
 import AddProduct from './Component/AddProduct/AddProduct';
 import ManageProduct from './Component/ManageProduct/ManageProduct';
 import NotFound from './Component/NotFound/NotFound';
+import About from './Component/About/About'
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
               <Banner></Banner>
               <Products></Products>
               <ShowRview></ShowRview>
+              <About></About>
               <Footer></Footer>
             </Route>
             <Route exact path="/home">
@@ -39,11 +41,17 @@ function App() {
               <Banner></Banner>
               <Products></Products>
               <ShowRview></ShowRview>
+              <About></About>
               <Footer></Footer>
             </Route>
             <Route path="/addreview">
               <Headar></Headar>
               <AddReview></AddReview>
+              <Footer></Footer>
+            </Route>
+            <Route path="/about">
+              <Headar></Headar>
+              <About></About>
               <Footer></Footer>
             </Route>
             <Route path="/myorder">

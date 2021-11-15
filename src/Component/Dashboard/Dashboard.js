@@ -6,14 +6,13 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
-import List from '@mui/material/List';
 import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Button } from 'react-bootstrap';
 import './Dashboard.css'
 import {
-    BrowserRouter as Router,
+
     Switch,
     Route,
     Link,
@@ -25,9 +24,8 @@ import Order from '../Order/Order';
 import useAuth from '../../hooks/useAuth';
 import AddProduct from '../../Component/AddProduct/AddProduct'
 import AddReview from '../../Component/AddReview/AddReview'
-import ShowAllProduct from '../../Component/ShowAllProduct/ShowAllProduct'
-import Header from '../Header/Header';
 import ManageProduct from '../ManageProduct/ManageProduct';
+import MyOrder from '../MyOrder/MyOrder';
 
 const drawerWidth = 150;
 
@@ -55,6 +53,7 @@ function Dashboard(props) {
             {admin && <Box>
                 <Link to={`${url}/makeadmin`} className="link">Make Admin</Link> <br />
                 <Link to={`${url}/addproduct`} className="link">Add Product</Link><br />
+                <Link to={`${url}/manageallorder`} className="link">Manage all Order</Link><br />
                 <Link to={`${url}/manageproduct`} className="link">Manage Products</Link><br />
             </Box>}
             <Button className="logout-btn" onClick={logout}>Log Out</Button>
@@ -146,6 +145,9 @@ function Dashboard(props) {
                     </Route>
                     <Route path={`${path}/manageproduct`}>
                         <ManageProduct></ManageProduct>
+                    </Route>
+                    <Route path={`${path}/manageallorder`}>
+                        <Order></Order>
                     </Route>
                     <Route path={`${path}/review`}>
                         <AddReview></AddReview>
