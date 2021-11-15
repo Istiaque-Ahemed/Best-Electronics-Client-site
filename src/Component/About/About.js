@@ -7,7 +7,7 @@ const About = () => {
         <>
             <div className="Accordion-area">
                 <div>
-                    <img style={{ width: '600px' }} src={"https://i.ibb.co/JdpB755/39598453-woman-housewife-shopping-for-microwave-oven-smiling.jpg"} alt="" />
+                    <img className="Accordion-img" src={"https://i.ibb.co/JdpB755/39598453-woman-housewife-shopping-for-microwave-oven-smiling.jpg"} alt="" />
                 </div>
                 <div>
                     <div className="about-para">

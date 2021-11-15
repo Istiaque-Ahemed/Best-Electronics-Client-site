@@ -16,3 +16,9 @@
     margin-left: 80px;
     background-color: rgb(224, 128, 64);;
 }
+@media (max-width: 767.98px){
+    .info-card{
+        margin:3px;
+        width: 300px;
+    }
+}

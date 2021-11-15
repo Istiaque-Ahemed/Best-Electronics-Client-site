@@ -22,7 +22,7 @@ const useFirebase = () => {
       .then((result) => {
         const user = result.user;
         setError('')
-        const destination = location?.state?.from || '/';
+        const destination = location?.state?.from || '/dashboard';
         history.replace(destination)
         saveUser(user.email, user.displayName, 'PUT')
       }).catch((error) => {
@@ -44,7 +44,7 @@ const useFirebase = () => {
 
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
-        const destination = location?.state?.from || '/';
+        const destination = location?.state?.from || '/dashboard';
         history.replace(destination)
         setError('')
       })

@@ -15,11 +15,12 @@
     border: none;
     
 }
-.Accordion-area img{
+.Accordion-img{
     padding-left: 40px;
+    width: 600px;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767.98px) {
     .Accordion{
         width: 290px;
     }
@@ -30,9 +31,9 @@
            
     
     }
-    .Accordion-area img{
+    .Accordion-img{
         width: 300px;
-        margin-left: 20px;
+        margin-left: 12px;
         margin-bottom: 20px;
     }
     .para{
