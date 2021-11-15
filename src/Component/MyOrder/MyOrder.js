@@ -9,7 +9,7 @@ const MyOrder = ({ myorder }) => {
     const [info, setInfo] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${productId}`)
+        fetch(`https://mysterious-castle-65738.herokuapp.com/products/${productId}`)
             .then(res => res.json())
             .then(data => setInfo(data))
     }, [])
@@ -18,7 +18,7 @@ const MyOrder = ({ myorder }) => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Are you sure,you want to delete?");
         if (proceed) {
-            const url = `http://localhost:5000/orders/${id}`;
+            const url = `https://mysterious-castle-65738.herokuapp.com/orders/${id}`;
             fetch(url, { method: "DELETE" })
                 .then((res) => res.json())
                 .then((data) => {

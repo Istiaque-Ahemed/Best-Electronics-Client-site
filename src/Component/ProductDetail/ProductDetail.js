@@ -15,7 +15,7 @@ const ProductDetail = () => {
     const { name, description, img, price } = product;
 
     useEffect(() => {
-        const url = `http://localhost:5000/products/${productId}`;
+        const url = `https://mysterious-castle-65738.herokuapp.com/products/${productId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
@@ -24,7 +24,7 @@ const ProductDetail = () => {
     const onSubmit = data => {
         console.log(data);
         axios
-            .post("http://localhost:5000/orders", data)
+            .post("https://mysterious-castle-65738.herokuapp.com/orders", data)
             .then((res) => {
                 if (res.data.insertedId) {
                     alert("Your buying successful");

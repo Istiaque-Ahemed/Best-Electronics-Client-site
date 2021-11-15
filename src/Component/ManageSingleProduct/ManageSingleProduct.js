@@ -8,7 +8,7 @@ const ManageSingleProduct = ({ manageSP }) => {
     const handleDelete = (id) => {
         const proceed = window.confirm("Are you sure,you want to delete?");
         if (proceed) {
-            const url = `http://localhost:5000/products/${id}`;
+            const url = `https://mysterious-castle-65738.herokuapp.com/products/${id}`;
             fetch(url, { method: "DELETE" })
                 .then((res) => res.json())
                 .then((data) => {

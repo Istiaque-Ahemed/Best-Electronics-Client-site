@@ -9,7 +9,7 @@ const Order = () => {
     const [orders, setOrder] = useState([])
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders/${user?.email}`)
+        fetch(`https://mysterious-castle-65738.herokuapp.com/orders/${user?.email}`)
             .then(res => res.json())
             .then(data => setOrder(data))
     }, [user.email])

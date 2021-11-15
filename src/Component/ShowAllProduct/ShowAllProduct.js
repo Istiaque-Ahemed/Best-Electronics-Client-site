@@ -9,7 +9,7 @@ const ShowAllProduct = () => {
     console.log(showAllProduct);
     useEffect(() => {
 
-        fetch('http://localhost:5000/products')
+        fetch('https://mysterious-castle-65738.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setShowAllProduct(data))
 
