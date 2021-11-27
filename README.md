@@ -1,7 +1,7 @@
 ## Best Electronics
 
 
-* This is micro oven niche website.
+* A full-stack single-page Nisc electronic product web app 
 * Here is different company oven available
 * This website have a deshboard.
 * Customers can easily be buying micro oven on this Website.
